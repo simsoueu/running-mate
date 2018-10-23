@@ -10,6 +10,7 @@ export class UserService {
     {
       name: "Pablo",
       username: "pablo",
+      description: "",
       city: "Belo Horizonte",
       country: "Brasil",
       createDate: new Date("10/10/2017 12:00:00"),
@@ -21,6 +22,7 @@ export class UserService {
     {
       name: "Ana",
       username: "ana",
+      description: "",
       city: "Porto Alegre",
       country: "Brasil",
       createDate: new Date("12/12/2017 12:00:00"),
@@ -32,6 +34,7 @@ export class UserService {
     {
       name: "Fabio",
       username: "fabio",
+      description: "",
       city: "Recife",
       country: "Brasil",
       createDate: new Date("09/09/2017 20:00:00"),

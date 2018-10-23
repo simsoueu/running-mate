@@ -7,10 +7,12 @@ import { HomeComponent } from "./home/home.component";
 import { UsersComponent } from "./users/users.component";
 import { CardModule } from "./components/card/card.module";
 import { PhotoModule } from "./users/photo/photo.module";
+import { UserComponent } from "./users/user/user.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
-  declarations: [HomeComponent, UsersComponent],
-  imports: [CommonModule, NgbModule, CardModule, PhotoModule],
+  declarations: [HomeComponent, UsersComponent, UserComponent],
+  imports: [CommonModule, RouterModule, NgbModule, CardModule, PhotoModule],
   exports: [HomeComponent, UsersComponent]
 })
 export class SharedModule {}

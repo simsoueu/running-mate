@@ -29,9 +29,10 @@
                   <div class="row text-muted small">{{ user.city }}</div>
                 </div>
                 <div class="m-1 text-center p-1">
-                  <a href="#"
-                    class="btn btn-outline-primary btn-sm"
-                    routerLink="/user/">Visit Profile</a>
+
+                  <a class="btn btn-outline-primary btn-sm"
+                    [routerLink]="['/user', user.username]">Dashboard</a>
+
                 </div>
               </div>
             </div>

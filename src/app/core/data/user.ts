@@ -1,3 +1,5 @@
+import { Photo } from "./photo";
+
 export class User {
   name: string;
   username: string;
@@ -5,4 +7,5 @@ export class User {
   city: string;
   country: string;
   createDate: Date;
+  photo: Photo;
 }

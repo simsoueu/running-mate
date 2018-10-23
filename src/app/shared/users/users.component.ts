@@ -18,6 +18,7 @@ export class UsersComponent implements OnInit, OnChanges {
   @Input()
   Users: User[] = [];
   rows: any[] = [];
+  router: any;
 
   constructor(private userService: UserService) {}
 
@@ -41,5 +42,10 @@ export class UsersComponent implements OnInit, OnChanges {
       newRows.push(Users.slice(index, index + 3));
     }
     return newRows;
+  }
+
+  goToUser(username: string) {
+    console.log("aqui");
+    this.router.navigate(["/user", username]);
   }
 }

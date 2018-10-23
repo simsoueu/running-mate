@@ -5,6 +5,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./shared/home/home.component";
 import { PageNotFoundComponent } from "./shared/page-not-found/page-not-found.component";
 import { UsersComponent } from "./shared/users/users.component";
+import { UserComponent } from "./shared/users/user/user.component";
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: "users",
     component: UsersComponent
+  },
+  {
+    path: "user/:username",
+    component: UserComponent
   },
   {
     path: "**",
