@@ -6,6 +6,7 @@ import { HomeComponent } from "./shared/home/home.component";
 import { PageNotFoundComponent } from "./shared/page-not-found/page-not-found.component";
 import { UsersComponent } from "./shared/users/users.component";
 import { UserComponent } from "./shared/users/user/user.component";
+import { DashboardComponent } from "./shared/dashboard/dashboard.component";
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: "user/:username",
     component: UserComponent
+  },
+  {
+    path: "dashboard",
+    component: DashboardComponent
   },
   {
     path: "**",

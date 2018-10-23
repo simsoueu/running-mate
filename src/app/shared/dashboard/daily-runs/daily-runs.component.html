@@ -1,0 +1,19 @@
+<div class="container">
+  <h3 class="m-3 p-2">Runs overtime (in meters) </h3>
+  <div class="row justify-content-center">
+    <div [hidden]="!chart"
+      class="col graph">
+      <canvas id="canvas">{{ chart }}</canvas>
+    </div>
+
+
+  </div>
+  <p>
+    <ngb-alert [dismissible]="false">
+      <strong>Wow!</strong> All the users registred run {{sumExpendend /1000}} km so far.
+    </ngb-alert>
+  </p>
+
+
+
+</div>
