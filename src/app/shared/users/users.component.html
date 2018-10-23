@@ -1,0 +1,47 @@
+<div class="container main-home">
+
+
+  <p class="text-center text-muted"
+    *ngIf="!Users.length">
+    Sorry, no users
+  </p>
+
+  <ol class="list-unstyled">
+
+    <li *ngFor="let cols of rows"
+      class="row no-gutters p-0">
+      <div class="mt-3"
+        *ngFor="let user of cols"
+        class="col-4">
+
+        <ap-card>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <ap-photo [url]="user.photo.url"
+                  [description]="user.photo.description"
+                  clsss="user-card">
+                </ap-photo>
+              </div>
+              <div class="col-7">
+                <div class="justify-content-between mt-4">
+                  <div class="row">{{ user.name }}</div>
+                  <div class="row text-muted small">{{ user.city }}</div>
+                </div>
+                <div class="m-1 text-center p-1">
+                  <a href="#"
+                    class="btn btn-outline-primary btn-sm"
+                    routerLink="/user/">Visit Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </ap-card>
+
+      </div>
+    </li>
+  </ol>
+
+</div>
