@@ -10,6 +10,7 @@ export class UserService {
     {
       name: "Pablo",
       username: "pablo",
+      fullname: "Pablo Lima",
       description: "",
       city: "Belo Horizonte",
       country: "Brasil",
@@ -22,25 +23,40 @@ export class UserService {
     {
       name: "Ana",
       username: "ana",
+      fullname: "Ana Clara",
       description: "",
       city: "Porto Alegre",
       country: "Brasil",
       createDate: new Date("12/12/2017 12:00:00"),
       photo: {
         url: "https://randomuser.me/api/portraits/women/18.jpg",
-        description: "pablo"
+        description: "ana"
       }
     },
     {
       name: "Fabio",
       username: "fabio",
+      fullname: "Fabio Moraes",
       description: "",
       city: "Recife",
       country: "Brasil",
       createDate: new Date("09/09/2017 20:00:00"),
       photo: {
         url: "https://randomuser.me/api/portraits/men/9.jpg",
-        description: "pablo"
+        description: "fabio"
+      }
+    },
+    {
+      name: "Rodrigo",
+      username: "rborge",
+      fullname: "Rodrigo Borges",
+      description: "",
+      city: "Campinas",
+      country: "Brasil",
+      createDate: new Date("09/09/2017 20:00:00"),
+      photo: {
+        url: "https://randomuser.me/api/portraits/men/11.jpg",
+        description: "rodrigo"
       }
     }
   ];
@@ -48,6 +64,10 @@ export class UserService {
   random(): User {
     this.current = Math.floor(Math.random() * this.playlist.length);
     return this.playlist[this.current];
+  }
+
+  public getUserByUsername(username: string) {
+    return this.playlist.find(u => u.username === username);
   }
 
   next(): User {

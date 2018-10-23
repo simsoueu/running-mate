@@ -2,10 +2,11 @@ import { Injectable } from "@angular/core";
 
 export class Activity {
   name: string;
-  mettersRun: number;
+  distance: number;
   description: string;
   dateActivity: Date;
   datePost: Date;
+  authorUsername: string;
 }
 
 @Injectable()
@@ -14,24 +15,67 @@ export class ActivityService {
   playlist: Activity[] = [
     {
       name: "Corrida Av. Brasil",
-      mettersRun: 2324,
+      distance: 3354,
       description: "Corrida pela manhã",
-      dateActivity: new Date("10/09/2018 09:00:00"),
-      datePost: new Date("10/09/2018 19:00:00")
+      dateActivity: new Date("10/10/2018 09:00:00"),
+      datePost: new Date("05/05/2018 19:00:00"),
+      authorUsername: "ana"
     },
     {
       name: "Corrida Av. Brasil",
-      mettersRun: 3354,
+      distance: 3354,
       description: "Corrida pela manhã",
       dateActivity: new Date("10/10/2018 09:00:00"),
-      datePost: new Date("10/10/2018 19:00:00")
+      datePost: new Date("08/09/2018 19:00:00"),
+      authorUsername: "ana"
+    },
+    {
+      name: "Corrida Av. Brasil",
+      distance: 3354,
+      description: "Corrida pela manhã",
+      dateActivity: new Date("10/10/2018 09:00:00"),
+      datePost: new Date("18/09/2018 19:00:00"),
+      authorUsername: "ana"
+    },
+    {
+      name: "Corrida Av. Brasil",
+      distance: 3354,
+      description: "Corrida pela manhã",
+      dateActivity: new Date("10/10/2018 09:00:00"),
+      datePost: new Date("09/10/2018 19:00:00"),
+      authorUsername: "ana"
+    },
+    {
+      name: "Corrida Av. Brasil",
+      distance: 2324,
+      description: "Corrida pela manhã",
+      dateActivity: new Date("10/09/2018 09:00:00"),
+      datePost: new Date("10/09/2018 19:00:00"),
+      authorUsername: "ana"
+    },
+    {
+      name: "Corrida Av. Brasil",
+      distance: 3354,
+      description: "Corrida pela manhã",
+      dateActivity: new Date("10/10/2018 09:00:00"),
+      datePost: new Date("11/10/2018 19:00:00"),
+      authorUsername: "ana"
+    },
+    {
+      name: "Corrida Av. Brasil",
+      distance: 3354,
+      description: "Corrida pela manhã",
+      dateActivity: new Date("10/11/2018 09:00:00"),
+      datePost: new Date("10/11/2018 19:00:00"),
+      authorUsername: "fabio"
     },
     {
       name: "Corrida Rua Argentina",
-      mettersRun: 2325,
+      distance: 2325,
       description: "Corrida pela manhã",
       dateActivity: new Date("10/11/2018 09:00:00"),
-      datePost: new Date("10/11/2018 19:00:00")
+      datePost: new Date("10/11/2018 19:00:00"),
+      authorUsername: "fabio"
     }
   ];
 
@@ -66,5 +110,13 @@ export class ActivityService {
     }
 
     return this.playlist[this.current];
+  }
+
+  public getActivitiesByUsername(username: string): any {
+    return this.playlist.filter(act => act.authorUsername === username);
+  }
+
+  public getAll(): Activity[] {
+    return this.playlist;
   }
 }
