@@ -1,13 +1,5 @@
 import { Injectable } from "@angular/core";
-
-export class Activity {
-  name: string;
-  distance: number;
-  description: string;
-  dateActivity: Date;
-  datePost: Date;
-  authorUsername: string;
-}
+import { Activity } from "./activity";
 
 @Injectable()
 export class ActivityService {
@@ -15,35 +7,47 @@ export class ActivityService {
   playlist: Activity[] = [
     {
       name: "Corrida Av. Brasil",
-      distance: 3354,
+      distance: 3351,
       description: "Corrida pela manhã",
       dateActivity: new Date("10/10/2018 09:00:00"),
       datePost: new Date("05/05/2018 19:00:00"),
-      authorUsername: "ana"
+      authorUsername: "ana",
+      authorPictureUrl: null,
+      timeSincePost: null,
+      timeSincePostStr: null
     },
     {
       name: "Corrida Av. Brasil",
-      distance: 3354,
+      distance: 3359,
       description: "Corrida pela manhã",
       dateActivity: new Date("10/10/2018 09:00:00"),
       datePost: new Date("08/09/2018 19:00:00"),
-      authorUsername: "ana"
+      authorUsername: "ana",
+      authorPictureUrl: null,
+      timeSincePost: null,
+      timeSincePostStr: null
     },
     {
       name: "Corrida Av. Brasil",
-      distance: 3354,
+      distance: 1300,
       description: "Corrida pela manhã",
-      dateActivity: new Date("10/10/2018 09:00:00"),
-      datePost: new Date("18/09/2018 19:00:00"),
-      authorUsername: "ana"
+      dateActivity: new Date("09/21/2018 09:00:00"),
+      datePost: new Date("09/18/2018 19:00:00"),
+      authorUsername: "ana",
+      authorPictureUrl: null,
+      timeSincePost: null,
+      timeSincePostStr: null
     },
     {
       name: "Corrida Av. Brasil",
-      distance: 3354,
+      distance: 2334,
       description: "Corrida pela manhã",
       dateActivity: new Date("10/10/2018 09:00:00"),
       datePost: new Date("09/10/2018 19:00:00"),
-      authorUsername: "ana"
+      authorUsername: "ana",
+      authorPictureUrl: null,
+      timeSincePost: null,
+      timeSincePostStr: null
     },
     {
       name: "Corrida Av. Brasil",
@@ -51,7 +55,10 @@ export class ActivityService {
       description: "Corrida pela manhã",
       dateActivity: new Date("10/09/2018 09:00:00"),
       datePost: new Date("10/09/2018 19:00:00"),
-      authorUsername: "ana"
+      authorUsername: "ana",
+      authorPictureUrl: null,
+      timeSincePost: null,
+      timeSincePostStr: null
     },
     {
       name: "Corrida Av. Brasil",
@@ -59,7 +66,10 @@ export class ActivityService {
       description: "Corrida pela manhã",
       dateActivity: new Date("10/10/2018 09:00:00"),
       datePost: new Date("11/10/2018 19:00:00"),
-      authorUsername: "ana"
+      authorUsername: "ana",
+      authorPictureUrl: null,
+      timeSincePost: null,
+      timeSincePostStr: null
     },
     {
       name: "Corrida Av. Brasil",
@@ -67,7 +77,10 @@ export class ActivityService {
       description: "Corrida pela manhã",
       dateActivity: new Date("10/11/2018 09:00:00"),
       datePost: new Date("10/11/2018 19:00:00"),
-      authorUsername: "fabio"
+      authorUsername: "fabio",
+      authorPictureUrl: null,
+      timeSincePost: null,
+      timeSincePostStr: null
     },
     {
       name: "Corrida Rua Argentina",
@@ -75,7 +88,10 @@ export class ActivityService {
       description: "Corrida pela manhã",
       dateActivity: new Date("10/11/2018 09:00:00"),
       datePost: new Date("10/11/2018 19:00:00"),
-      authorUsername: "fabio"
+      authorUsername: "fabio",
+      authorPictureUrl: null,
+      timeSincePost: null,
+      timeSincePostStr: null
     }
   ];
 

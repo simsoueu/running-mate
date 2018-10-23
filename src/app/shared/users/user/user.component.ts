@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { UserService } from "src/app/core/data/user.service";
-import { ActivityService, Activity } from "src/app/core/data/activity.service";
+import { ActivityService } from "src/app/core/data/activity.service";
+import { Activity } from "src/app/core/data/activity";
 import { User } from "src/app/core/data/user";
 
 @Component({

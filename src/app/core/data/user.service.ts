@@ -58,6 +58,19 @@ export class UserService {
         url: "https://randomuser.me/api/portraits/men/11.jpg",
         description: "rodrigo"
       }
+    },
+    {
+      name: "Regina",
+      username: "re",
+      fullname: "Regina Medeiros de Souza",
+      description: "",
+      city: "Vitoria",
+      country: "Brasil",
+      createDate: new Date("27/10/2017 20:00:00"),
+      photo: {
+        url: "https://randomuser.me/api/portraits/women/11.jpg",
+        description: "rodrigo"
+      }
     }
   ];
 

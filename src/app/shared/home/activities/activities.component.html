@@ -1,0 +1,67 @@
+<div class="mb-2 card gedf-card"
+    *ngFor="let act of activities">
+    <div class="card-header p-2">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="mr-2">
+                    <img class="rounded-circle"
+                        width="45"
+                        src="{{act.authorPictureUrl}}"
+                        alt="">
+                </div>
+                <div class="ml-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="h7 text-muted">{{act.authorUsername}}</div>
+                            <div class="text-muted h7 mb-2">, {{act.timeSincePostStr}} ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+
+                <div class="col text-right">
+                    <div ngbDropdown
+                        placement="bottom-right"
+                        class="d-inline-block">
+                        <button class="btn btn-outline-primary"
+                            id="dropdownBasic2"
+                            ngbDropdownToggle></button>
+                        <div ngbDropdownMenu
+                            aria-labelledby="dropdownBasic2">
+                            <button class="dropdown-item">Save</button>
+                            <button class="dropdown-item">Hide</button>
+                            <button class="dropdown-item">Report</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="card-body">
+
+        <a class="card-link"
+            href="#">
+            <h5 class="card-title"> {{act.name}} </h5>
+        </a>
+
+        <p class="card-text">
+            {{act.description}}
+
+        </p>
+        <span class="card-text">
+            {{act.distance / 1000 | number}} km run
+        </span>
+
+    </div>
+    <div class="card-footer">
+        <a href="#"
+            class="card-link"> Like</a>
+        <a href="#"
+            class="card-link"> Comment</a>
+        <a href="#"
+            class="card-link"> Share</a>
+    </div>
+</div>
