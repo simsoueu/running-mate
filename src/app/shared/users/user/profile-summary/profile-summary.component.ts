@@ -25,8 +25,8 @@ export class ProfileSummaryComponent implements OnInit {
   @Input()
   user: User;
 
-  private summary: Summary;
-  private achievements: Achievement[];
+  public summary: Summary;
+  public achievements: Achievement[];
 
   constructor(private achievementsService: AchievementService) {}
 

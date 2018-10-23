@@ -12,12 +12,12 @@ import { User } from "src/app/core/data/user";
   styleUrls: ["./user.component.sass"]
 })
 export class UserComponent implements OnInit, OnDestroy {
-  private sub: any;
-  private username: any;
-  private currentUser: User;
-  private activities: Activity[];
-  private lastActivity: Activity;
-  private lastActivityStr: string;
+  public sub: any;
+  public username: any;
+  public currentUser: User;
+  public activities: Activity[];
+  public lastActivity: Activity;
+  public lastActivityStr: string;
 
   constructor(
     private route: ActivatedRoute,

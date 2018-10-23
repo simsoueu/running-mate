@@ -16,9 +16,9 @@ class TimelineActivity extends Activity {
   styleUrls: ["./home.component.sass"]
 })
 export class HomeComponent implements OnInit {
-  private users: User[];
-  private activities: Activity[];
-  private sumDistanceRun: number;
+  public users: User[];
+  public activities: Activity[];
+  public sumDistanceRun: number;
 
   constructor(
     private userService: UserService,

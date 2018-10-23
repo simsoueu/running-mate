@@ -16,7 +16,7 @@ export class DailyRunsComponent implements OnInit {
   expensesAmount: any[];
   expensesAvg: any[];
   expensesSum: any[];
-  private sumExpendend: number;
+  public sumExpendend: number;
 
   constructor(private dashboardService: ActivityService) {}
 
