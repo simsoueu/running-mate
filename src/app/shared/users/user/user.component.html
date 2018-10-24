@@ -1,34 +1,50 @@
 <div class="container main-home">
 
 
-  <div class="row mt-4">
-    <div class="col-md-3">
-      <div class="card">
-        <div class="m-2 justify-content-center">
-          <img class="rounded-circle"
-            width="80"
-            src="{{currentUser.photo.url}}"
-            alt="">
-        </div>
-        <div class="card-body">
-          <div class="h5">{{currentUser.username}}</div>
-          <div class="h7 text-muted">{{currentUser.fullname}}</div>
-          <div class="h7">{{currentUser.city}}
+  <div class="row pt-4">
+    <div class="col-md-3 sidebar">
+      <div class="container-fluid">
+        <div class="row user-profile">
+          <div class="div bg-top">
+          </div>
+          <div class="col dashboard-profile-picture u-inlinkeBlock">
+            <img class="rounded-circle user-picture"
+              width="95"
+              src="{{currentUser.photo.url}}"
+              alt="">
+
+          </div>
+          <div class="col dashboard-profile-info">
+            <div class="title">{{currentUser.username}}</div>
+            <div class="fullname">{{currentUser.fullname}}</div>
+            <div class="city">{{currentUser.city}}
+            </div>
+
           </div>
         </div>
-        <ul class="list-group list-group-flush"
-          style="margin-top: 15px">
-          <li class="list-group-item">
-            <div class="h6 text-muted">Number of activities</div>
-            <div class="h5">{{activities.length}}</div>
-          </li>
-          <li class="list-group-item">
-            <div class="h6 text-muted">Last Activity</div>
-            <div class="h5">{{lastActivityStr}}</div>
-          </li>
-          <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
       </div>
+      <div class="flex-module">
+        <div class="about-user-item">
+          <div class="flex-module-header">
+            <h3>About {{currentUser.username}}</h3>
+          </div>
+          <div class="about-user-text">{{currentUser.username}} has {{activities.length}} runs recorded here in this
+            plataform.
+          </div>
+        </div>
+
+        <div class="about-user-item">
+          <div class="flex-module-header">
+            <h3>Last Activity</h3>
+          </div>
+          <div class="about-user-text">
+            {{lastActivityStr}}
+          </div>
+        </div>
+
+      </div>
+
+
     </div>
     <div class="col-md-6 gedf-main">
       <div class="card">
