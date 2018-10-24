@@ -49,7 +49,7 @@ export class UserComponent implements OnInit, OnDestroy {
       this.lastActivityStr = "This user hasen't performed any activity yet!";
     }
     // console.log(this.lastActivity.dateActivity.toDateString());
-    console.log(this.currentUser.city);
+    // console.log(this.currentUser.city);
   }
 
   ngOnDestroy() {

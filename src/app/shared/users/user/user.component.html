@@ -12,28 +12,34 @@
               width="95"
               src="{{currentUser.photo.url}}"
               alt="">
-
           </div>
           <div class="col dashboard-profile-info">
             <div class="title">{{currentUser.username}}</div>
             <div class="fullname">{{currentUser.fullname}}</div>
             <div class="city">{{currentUser.city}}
             </div>
-
           </div>
         </div>
       </div>
+
       <div class="flex-module">
         <div class="about-user-item">
           <div class="flex-module-header">
             <h3>About {{currentUser.username}}</h3>
           </div>
-          <div class="about-user-text">{{currentUser.username}} has {{activities.length}} runs recorded here in this
-            plataform.
-          </div>
+          <ng-container *ngIf="activities.length > 0; else elseTemplate">
+            <div class="about-user-text">{{currentUser.username}} has {{activities.length}} runs recorded here in this
+              plataform.
+            </div>
+          </ng-container>
+          <ng-template #elseTemplate>
+            <div class="about-user-text">{{currentUser.username}} hasn't run yet.
+            </div>
+          </ng-template>
         </div>
 
-        <div class="about-user-item">
+        <div *ngIf="activities.length > 0"
+          class="about-user-item">
           <div class="flex-module-header">
             <h3>Last Activity</h3>
           </div>
