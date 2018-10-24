@@ -1,7 +1,5 @@
 <div class="container main-home">
-
-
-  <div class="row pt-4">
+  <div class="row pt-2">
     <div class="col-md-3 sidebar">
       <div class="container-fluid">
         <div class="row user-profile">
@@ -52,12 +50,12 @@
 
 
     </div>
-    <div class="col-md-6 gedf-main">
+    <div class="col-md-6 gedf-main pr-0">
       <div class="card">
         <ngb-tabset>
           <ngb-tab title="Share your activity">
             <ng-template ngbTabContent>
-              <div class="card-body">
+              <div class="card-body p-2">
                 <div class="tab-content"
                   id="myTabContent">
                   <div class="tab-pane fade show active"
@@ -98,10 +96,11 @@
                   <div class="btn-group">
 
 
-                    <div class="col text-right">
+                    <div class="col text-right pr-0">
                       <div ngbDropdown
                         placement="bottom-right"
-                        class="d-inline-block">
+                        class="d-inline-block"
+                        style="border: none">
                         <button class="btn btn-outline-primary"
                           id="dropdownBasic2"
                           ngbDropdownToggle></button>
@@ -120,7 +119,7 @@
             </ng-template>
           </ngb-tab>
           <ngb-tab>
-            <ng-template ngbTabTitle><b>Fancy</b> title</ng-template>
+            <ng-template ngbTabTitle>Historic</ng-template>
             <ng-template ngbTabContent>
               <app-profile-summary [user]="currentUser"
                 [activities]="activities"></app-profile-summary>
@@ -136,14 +135,9 @@
 
       </div>
 
-
-
-
-
-
     </div>
     <div class="col-md-3">
-      <div class="card gedf-card">
+      <div>
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
@@ -155,18 +149,7 @@
             class="card-link">Another link</a>
         </div>
       </div>
-      <div class="card gedf-card">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-            card's content.</p>
-          <a href="#"
-            class="card-link">Card link</a>
-          <a href="#"
-            class="card-link">Another link</a>
-        </div>
-      </div>
+
     </div>
   </div>
 

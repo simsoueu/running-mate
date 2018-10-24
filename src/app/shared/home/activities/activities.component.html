@@ -1,6 +1,6 @@
-<div class="mb-2 card gedf-card"
+<div class="mb-2"
     *ngFor="let act of activities">
-    <div class="card-header p-2">
+    <div class="p-2">
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="mr-2">
@@ -12,8 +12,11 @@
                 <div class="ml-2">
                     <div class="container">
                         <div class="row">
-                            <div class="h7 text-muted">{{act.authorUsername}}</div>
-                            <div class="text-muted h7 mb-2">, {{act.timeSincePostStr}} ago</div>
+                            <div class="activity-author-detail">
+                                <a [routerLink]="['/user', act.authorUsername]">{{act.authorUsername}}</a>
+
+                                shared this activity</div>
+                            <div class="activity-author-detail mb-2">, {{act.timeSincePostStr}} ago</div>
                         </div>
                     </div>
                 </div>
@@ -25,7 +28,7 @@
                     <div ngbDropdown
                         placement="bottom-right"
                         class="d-inline-block">
-                        <button class="btn btn-outline-primary"
+                        <button class="btn btn-outline-dark custom-drop"
                             id="dropdownBasic2"
                             ngbDropdownToggle></button>
                         <div ngbDropdownMenu
@@ -40,11 +43,11 @@
         </div>
 
     </div>
-    <div class="card-body">
+    <div class="card-body p-2">
 
         <a class="card-link"
             href="#">
-            <h5 class="card-title"> {{act.name}} </h5>
+            <h5 class="card-title activity-title"> {{act.name}} </h5>
         </a>
 
         <p class="card-text">

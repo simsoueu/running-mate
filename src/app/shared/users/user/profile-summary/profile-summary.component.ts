@@ -40,11 +40,18 @@ export class ProfileSummaryComponent implements OnInit {
       this.summary.sumDistance / this.summary.totalActivities
     ).toFixed();
 
-    this.summary.lastRunDistance = this.activities[0].distance;
+    if (isNaN(this.summary.averageRun)) {
+      this.summary.averageRun = 0;
+    }
 
+    if (this.activities.length > 0) {
+      this.summary.lastRunDistance = this.activities[0].distance;
+    }
     this.achievements = this.achievementsService.getActivitiesByUsername(
       this.user.username
     );
+
+    this.summary.lastRunDistance = 0;
   }
 
   goToUser(username: string) {
